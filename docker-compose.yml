@@ -1,0 +1,19 @@
+version: '3' 
+services:
+  db:
+    image: postgres:9.6-alpine
+    container_name: db
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: taskdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+  employee-service:
+    build: .
+    restart: always
+    ports:
+      - "8090:8090"
+    depends_on:
+      - "db"

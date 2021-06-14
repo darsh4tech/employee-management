@@ -1,0 +1,17 @@
+Hello Sir,
+i have attached [employee-service-contract.json] --> the generated from OPENAPI by following the URL [http://localhost:8090/v3/api-docs/] and i formatted it in JSON
+
+please follow this instruction for success build to the project:
+
+1-inside the root of the project issue command ---> [mvn clean install] or you can use [./mvnw] wrapper of spring boot 
+by doing this you will generate the jar file and run unit test (for unit test i just put a smaple for integration test function and the rest of function will be easy so put just sample)
+
+2-insdei the root of the project issue command ---> [docker-compoe up] and it will build the image using the existing Dockerfile then start the DB then our serivce 
+
+the URL fo rour serivre :
+
+1- POST EmployeeDTO http://localhost:8090/employee
+
+2- PUT http://localhost:8090/employee/{employeeName}/{your-desired-state}
+
+thanks
